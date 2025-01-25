@@ -28,7 +28,7 @@
     "@angular/compiler-cli": "~19.0.0",
     "@angular/language-service": "~19.0.0",
     "@eslint/js": "^9.8.0",
-    "@ngx-translate/core": "^16.0.4",
+    "@ngx-translate/core": "15.0.0",
     "@nx/angular": "20.3.1",
     "@nx/eslint": "20.3.1",
     "@nx/eslint-plugin": "20.3.1",

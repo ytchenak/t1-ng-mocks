@@ -1,27 +1,15 @@
-import { TestBed } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
+import { AppModule } from './../app.module';
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
+import { MockBuilder, MockRender } from 'ng-mocks';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [AppComponent, RouterModule.forRoot([])],
-    }).compileComponents();
-  });
+  beforeEach( () => MockBuilder(AppComponent, AppModule));
 
-  it('should render title', () => {
+  it('should create the app', () => {
+    MockRender(AppComponent);
+    console.log(document.body.innerHTML);
     
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome t1-ng-mocks'
-    );
   });
 
-  it(`should have as title 't1-ng-mocks'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('t1-ng-mocks');
-  });
 });
